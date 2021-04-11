@@ -50,12 +50,26 @@ int main(int argc, const char * argv[]) {
             printf("Environment variable not created...\n");
         }
         
+        //Unset the value of an environment variable
+        char var_name[50];
+        printf("Enter the variable to Delete:");
+        scanf("%s", var_name);
+        // Returns 0 --> On Success || -1 on failure
+        status = unsetenv(var_name);
+        
+        if(status == 0)
+        {
+            printf("Environment Variable Deleted Successfully!\n");
+        }
+        else
+        {
+            printf("Unable to Delete the Environment variable.\n");
+        }
+        
         printf("Would you like to Continue (1) or Stop (0)?: ");
         scanf("%d", &stayAlive);
         
     }
-    
-    
     
     return 0;
 }
