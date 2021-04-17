@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h> //for getenv()
+#include "LearningFork.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -69,6 +70,14 @@ int main(int argc, const char * argv[]) {
         printf("Would you like to Continue (1) or Stop (0)?: ");
         scanf("%d", &stayAlive);
         
+    }
+    
+    int forkresult = 0;
+    forkresult = createChild();
+    
+    if (forkresult < 0)
+    {
+        printf("Uh oh......");
     }
     
     return 0;
