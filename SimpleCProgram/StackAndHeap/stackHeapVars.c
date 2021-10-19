@@ -1,12 +1,18 @@
-/************************************************************
- * To Compile: gcc -g -o0 stackHeapVars.c -o stackHeapVars  *
- *                                                          *
- * To Run w/gdb: gdb ./stackHeapVars                        *
- *                                                          *
- * NOTE: You should be in the same directory of the         *
- *       source code/compiled binary when running these     *
- *       commands.                                          *
- ************************************************************/
+/********************************************************************
+ * To Compile: gcc -g -o0 stackHeapVars.c -o stackHeapVars          *
+ *             * The -g flag adds debugging symbols                 *
+ *               to make it easier to look at our variables         *
+ *             * The -o0 flag tells gcc to turn off optimization    *
+ *               (We don't want x to be optomized out)              *
+ * To Run w/gdb: gdb ./stackHeapVars                                *
+ *                                                                  *
+ * NOTE: You should be in the same directory of the                 *
+ *       source code/compiled binary when running these             *
+ *       commands.                                                  *
+ *                                                                  *
+ * Source: This is from a blog/tutorial that can be found at:       *
+ *  https://jvns.ca/blog/2021/05/17/how-to-look-at-the-stack-in-gdb *
+ ********************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
